@@ -1,0 +1,32 @@
+.section_one{
+    background-color: var(--clr-n-white);
+    .container{
+
+        & > div{
+            padding: 3rem 0;
+            h2{
+                font-size: 1.75rem;
+            }
+            & > div{
+                figure{
+                    padding: 1.5rem 0;
+                    img{
+                        width: 100%;
+                    }
+                }
+                article{
+                    div{
+                        
+                        p{
+                            margin-top: 1rem;
+                            line-height: 1.5;
+                            margin-bottom: 2rem;
+                            font-size: 1.03rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

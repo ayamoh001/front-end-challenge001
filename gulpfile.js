@@ -52,8 +52,6 @@ gulp.task("img", () => {
         .pipe(gulp.dest("dist/assets/images"));
 });
 
-
-
 gulp.task("zip", () => {
     return gulp.src("dist")
         .pipe(zip("dist.zip"))  

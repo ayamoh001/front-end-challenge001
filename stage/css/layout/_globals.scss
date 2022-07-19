@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+// @font-face {
+//     font-family: 'Overpass';
+//     src: url()
+// }
+// @font-face {
+//     font-family: 'Ubuntu';
+//     src: url();
+// }
+
+$curve:100px;
+
+:root{
+    --ff-overpass: 'Overpass',sans-serif;
+    --ff-ubuntu: 'Ubuntu',sans-serif;
+    --fw-300:300;
+    --fw-600:600;
+    --fw-400:400;
+    --fw-500:500;
+    --fw-700:700;
+    --fs-body:16px;
+
+
+    --clr-p-light-red: hsl(356, 100%, 66%);
+    --clr-p-very-light-red:hsl(355, 100%, 74%);
+    --clr-p-very-dark-blue:hsl(208, 49%, 24%);
+
+    --clr-n-white:hsl(0, 0%, 100%);
+    --clr-n-grayish-blue:hsl(240, 2%, 79%);
+    --clr-n-very-dark-grayish-blue:hsl(207, 13%, 34%);
+    --clr-n-very-dark-black-blue:hsl(240, 10%, 16%);
+
+    --clr-g-intro:linear-gradient(135deg,  hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    --clr-g-body:linear-gradient(180deg,  hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+
+    --max-width: 1110px;
+    --margin-x: 165px;
+
+    --desktop-bp: 1440px;
+    --mobile-bp: 375px;
+}
+
+//normalizing elements
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-overpass);
+}
+
+body{
+    
+}
+.container{
+    padding: 2rem;
+    margin-inline: auto;
+    text-align: center;
+    h2{
+        color: var(--clr-p-very-dark-blue);
+    }
+}
+
+
