@@ -56,6 +56,7 @@ body{
 }
 button{
     cursor: pointer;
+    white-space: nowrap;
 }
 .container{
     padding: 2rem;
@@ -70,12 +71,13 @@ button{
 @media screen and (min-width:376px){
     :root{
         --clr-g-intro:linear-gradient(to right,  hsl(13, 100%, 72%),hsl(353, 100%, 62%))
+        --clr-g-body:linear-gradient(to right,  hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     }
     body{
         background: var(--clr-bg-grey);
     }
     .container{
-        padding: 3rem 10rem;
+        padding: 4rem 10rem;
     }
 }
 

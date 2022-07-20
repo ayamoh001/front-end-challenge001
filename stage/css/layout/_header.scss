@@ -48,6 +48,9 @@ header{
                                 top: 50%;
                                 margin-left:.5rem;
                             }
+                            &:hover{
+                                text-decoration: underline;
+                            }
                         }
                         ul{
                             display: flex;
@@ -67,6 +70,7 @@ header{
                                 a{
                                     color:var(--clr-p-very-dark-blue);
                                     text-decoration: none;
+                                    font-weight: 300;
                                 }
                             }
                         }
@@ -105,16 +109,19 @@ header{
                             border: none;
                             border-radius: 100vmax;
                             font-size: 1.25rem;
-                            font-weight: 600;
                             line-height: normal;
+                            font-weight: var(--fw-700);
+                            font-family: var(--ff-ubuntu);
                             &:nth-child(1){
                                 background: none;
                                 color: var(--clr-p-very-dark-blue);
+
                             }
                             &:nth-child(2){
                                 background: var(--clr-g-intro);
                                 color: var(--clr-n-white);
                                 line-height: normal;
+                                
                             }
                             
                         }
@@ -150,9 +157,6 @@ header{
                 }
                 
             }
-        }
-        @media  screen and (max-width:375px) {
-            
         }
         @media screen and (min-width:376px){
                 nav{
@@ -198,6 +202,14 @@ header{
                                     position: absolute;
                                     background: var(--clr-n-white);
                                     font-size: 1rem;
+                                    li{
+                                        a{
+                                            &:hover{
+                                                font-weight: bold;
+                                            }
+                                        }
+                                        
+                                    }
                                 }
                                 &.show-li{
                                     ul{
@@ -218,13 +230,20 @@ header{
                                 display: none;
                             }
                             button{
+                                
                                 &:nth-child(1){
                                     color: var(--clr-n-white);
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
                                 }
                                 &:nth-child(2){
                                     background: var(--clr-n-white);
                                     color: var(--clr-p-very-light-red);
-                                    
+                                    &:hover{
+                                        background: var(--clr-p-very-light-red);
+                                        color: var(--clr-n-white);
+                                    }
                                 }
                             }
                             
@@ -261,14 +280,24 @@ header{
                     width: 100%;
                     line-height: 1;
                     white-space: nowrap;
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                     font-weight: var(--fw-700);
                     font-family: var(--ff-ubuntu);
                     color: var(--clr-p-very-light-red);
+                    &:nth-child(1){
+                        &:hover{
+                            background: var(--clr-p-very-light-red);
+                            color: var(--clr-n-white);
+                        }
+                    }
                     &:nth-child(2){
                         background: transparent;
                         border: 2px solid var(--clr-n-white);
                         color: var(--clr-n-white);
+                        &:hover{
+                            background: var(--clr-n-white);
+                            color: var(--clr-p-very-light-red);
+                        }
                     }
                     
                 }

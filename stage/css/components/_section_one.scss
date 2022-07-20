@@ -1,5 +1,6 @@
 .section_one{
     .container{
+        overflow: hidden;
         & > div{
             padding: 3rem 0;
             h2{
@@ -27,8 +28,9 @@
                         p{
                             
                             line-height: 1.5;
-                            
-                            font-size: 1.03rem;
+                            color: var(--clr-n-grayish-blue);
+                            font-size: 1rem;
+                            font-family: var(--ff-ubuntu);
                         }
                     }
 
@@ -46,7 +48,7 @@
                 &>div{
                     display: flex;
                     flex-direction: row-reverse;
-                    gap: 5rem;
+                    gap: 6rem;
                     figure{
                         width: 100%;
                         position: relative;

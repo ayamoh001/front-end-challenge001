@@ -15,7 +15,7 @@ footer{
                 }
                 h4{
                     margin-bottom: 1.5rem;
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                 }
                 ul{
                     list-style: none;
@@ -25,6 +25,9 @@ footer{
                         a{
                             color: var(--clr-n-grayish-blue);
                             text-decoration: none;
+                            &:hover{
+                                text-decoration: underline;
+                            }
                         }
         
                     }
