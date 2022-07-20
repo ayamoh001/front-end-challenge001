@@ -1,7 +1,5 @@
 .section_one{
-    background-color: var(--clr-n-white);
     .container{
-
         & > div{
             padding: 3rem 0;
             h2{
@@ -12,19 +10,75 @@
                     padding: 1.5rem 0;
                     img{
                         width: 100%;
+                        &:nth-child(2){
+                            display:none;
+                        }
                     }
                 }
                 article{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4rem;
                     div{
                         
+                        h2{
+                            margin-bottom: 1rem;
+                        }
                         p{
-                            margin-top: 1rem;
+                            
                             line-height: 1.5;
-                            margin-bottom: 2rem;
+                            
                             font-size: 1.03rem;
                         }
                     }
 
+                }
+            }
+        }
+        @media screen and (min-width:376px) {
+        background: var(--clr-bg-grey);
+            &>div{
+                padding: 7rem 0;
+                &>h2{
+                    font-size: 2.5rem;
+                    margin-bottom: 5rem;
+                }
+                &>div{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    gap: 5rem;
+                    figure{
+                        width: 100%;
+                        position: relative;
+                        
+                        img{
+                            width: 180%;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            position: absolute;
+                            &:nth-child(1){
+                                display:none;
+                            }
+                            &:nth-child(2){
+                                display:block;
+                            }
+                        }
+                    }
+                    article{
+                        width: 100%;
+                        text-align: left;
+                        div{
+                            h2{
+                                font-size: 2rem;
+                                margin-bottom: 1.5rem;
+                            }
+                            p{
+                                line-height: 1.75;
+
+                            }
+                        }
+                        
+                    }
                 }
             }
         }

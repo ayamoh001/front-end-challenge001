@@ -1,10 +1,13 @@
 .section_three{
-    
+    margin: 4rem 0;
     figure{
 
         img{
             width: 100%;
-            padding: 3rem 0;
+            margin-bottom: 2rem;
+            &:nth-child(2){
+                display: none;
+            }
         }
     }
     .container{
@@ -14,11 +17,48 @@
 
             }
             p{
-                color: var(--clr-n-grayish-blue);
                 margin: 1rem 0 2rem 0;
                 line-height: 1.5;
             }
         }
+    }
+    @media screen and (min-width:376px) {
+        display: flex;
+        margin: 20rem 0;
+
+        figure{
+            width: 100%;
+            position: relative;
+            img{
+                position: absolute;
+                width: 140%;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                &:nth-child(1){
+                    display: none;
+                }
+                &:nth-child(2){
+                    display: block;
+                    
+                }
+            }
+        }
+        .container{
+            width:100%;
+            text-align: left;
+            padding: 0 10rem 0 0;
+            div{
+                h2{
+                    font-size: 2rem;
+                }
+                p{
+                    line-height: 1.75;
+                }
+            }
+            
+        }
+        
     }
             
 }

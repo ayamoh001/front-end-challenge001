@@ -31,14 +31,16 @@ $curve:100px;
     --clr-n-very-dark-grayish-blue:hsl(207, 13%, 34%);
     --clr-n-very-dark-black-blue:hsl(240, 10%, 16%);
 
-    --clr-g-intro:linear-gradient(135deg,  hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    --clr-g-intro:linear-gradient(to bottom,  hsl(13, 100%, 72%),hsl(353, 100%, 62%));
     --clr-g-body:linear-gradient(180deg,  hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+
+    --clr-bg-grey:#fafafa;
 
     --max-width: 1110px;
     --margin-x: 165px;
 
     --desktop-bp: 1440px;
-    --mobile-bp: 375px;
+    --mobile-bp: 376px;
 }
 
 //normalizing elements
@@ -52,12 +54,28 @@ $curve:100px;
 body{
     
 }
+button{
+    cursor: pointer;
+}
 .container{
     padding: 2rem;
     margin-inline: auto;
     text-align: center;
     h2{
         color: var(--clr-p-very-dark-blue);
+    }
+
+}
+
+@media screen and (min-width:376px){
+    :root{
+        --clr-g-intro:linear-gradient(to right,  hsl(13, 100%, 72%),hsl(353, 100%, 62%))
+    }
+    body{
+        background: var(--clr-bg-grey);
+    }
+    .container{
+        padding: 3rem 10rem;
     }
 }
 
