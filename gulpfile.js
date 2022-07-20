@@ -30,10 +30,11 @@ gulp.task("css", () => {
         .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
         .pipe(autoprefixer())
         .pipe(concat("main.css"))
-        .pipe(cssnano())
+        // .pipe(cssnano())
         .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest("dist/assets/css"));
 });
+
 
 gulp.task("js", () => {
     return gulp
@@ -67,14 +68,14 @@ gulp.task("deploy", () => {
         parallel: 10,
     } );
     return gulp.src( ['dist/**/*.*'], { base: '.', buffer: false } )
-        .pipe( conn.newer( '/htdocs/front-end-mentor/bloger-challenge' ) ) 
-        .pipe( conn.dest( '/htdocs/front-end-mentor/bloger-challenge' ) );
+        .pipe( conn.newer( '/htdocs/front-end-mentor/blogr-challenge' ) ) 
+        .pipe( conn.dest( '/htdocs/front-end-mentor/blogr-challenge' ) );
  
 } );
 
 gulp.task("watch", () => {
     gulp.watch("stage/html/**/*.pug", gulp.series("templates"));
-    gulp.watch(["stage/css/**/*.css", "stage/css/**/*.scss"],gulp.series("css"));
+    gulp.watch(["stage/css/**/*.css", "stage/css/**/*.scss"],gulp.series(["css"]));
     gulp.watch("stage/js/**/*.js", gulp.series("js"));
     // gulp.watch("stage/images/**/*.*", gulp.series("img"));
     // gulp.watch("stage/**/*.*", gulp.series("deploy"));
