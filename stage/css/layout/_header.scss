@@ -22,7 +22,7 @@ header{
         }  
     }
     @media screen and (min-width:376px) {
-        img{
+        &>img{
             &:nth-child(1){
                 display: none;
             }
@@ -87,9 +87,9 @@ header{
                         }
                         ul{
                             display: flex;
-                            transform: scaleY(0);
                             transform-origin: top;
                             height: 0;
+                            overflow: hidden;
                             transition: .3s;
                             font-weight: 700;
                             list-style: none;
@@ -112,7 +112,6 @@ header{
                                 transform: rotate(0deg);
                             }
                             ul{
-                                transform: scaleY(1);
                                 height: 100%;
                                 padding: 1rem;
                                 margin: 1rem 0 0 0; 
