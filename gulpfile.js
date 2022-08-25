@@ -68,8 +68,8 @@ gulp.task("deploy", () => {
         parallel: 10,
     } );
     return gulp.src( ['dist/**/*.*'], { base: '.', buffer: false } )
-        .pipe( conn.newer( '/htdocs/front-end-mentor/blogr-challenge' ) ) 
-        .pipe( conn.dest( '/htdocs/front-end-mentor/blogr-challenge' ) );
+        .pipe( conn.newer( '/htdocs/blogr-challenge' ) ) 
+        .pipe( conn.dest( '/htdocs/blogr-challenge' ) );
  
 } );
 

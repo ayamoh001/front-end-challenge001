@@ -1,35 +1,14 @@
 header{
-    background:var(--clr-g-intro);
     border-radius: 0 0 0 $curve;
     position: relative;
     overflow: hidden;
-    &>img{
-        z-index: 1;
-        position: absolute;
-        &:nth-child(1){
-            width: 350%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-40%, -40%);
-        }
-        &:nth-child(2){
-            display: none;
-            display: block;
-            width: 230%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-37%,-52%);
-        }  
-    }
-    @media screen and (min-width:376px) {
-        &>img{
-            &:nth-child(1){
-                display: none;
-            }
-            &:nth-child(2){
-                display: block;
-            }  
-        }
+    background: url("../images/bg-pattern-intro-desktop.svg") ,var(--clr-g-intro) ;
+    background-position: center;
+    
+    @media screen and (min-width:1000px) {
+        background: url("../images/bg-pattern-intro-mobile.svg") ,var(--clr-g-intro) ;
+        background-size: 130%;
+        background-position: center;
     }
     
     .container{
@@ -190,7 +169,7 @@ header{
                 
             }
         }
-        @media screen and (min-width:376px){
+        @media screen and (min-width:1000px){
                 nav{
                     height: fit-content;
                     padding: 0;
@@ -302,13 +281,16 @@ header{
             }
             div{
                 display: flex;
+                flex-wrap: wrap;
                 gap: 1rem;
                 width: 100%;
+                max-width: 30rem;
                 button{
+                    flex: 9rem;
                     background-color: var(--clr-n-white);
                     border-radius: 100vmax;
                     border: none;
-                    padding: 1rem 0;
+                    padding: 1rem;
                     width: 100%;
                     line-height: 1;
                     white-space: nowrap;
@@ -335,7 +317,7 @@ header{
                 }
             }
         }
-        @media screen and (min-width:376px) {
+        @media screen and (min-width:1000px) {
             .landing{
                 h1{
                     font-size: 3.5rem;
@@ -344,7 +326,10 @@ header{
                     font-size: 1.25rem;
                 }
                 div{
-                    width: 30%;
+                    width: fit-content;
+                    button{
+                        flex: 40%;
+                    }
                 }
             }
             

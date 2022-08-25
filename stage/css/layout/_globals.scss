@@ -40,7 +40,7 @@ $curve:100px;
     --margin-x: 165px;
 
     --desktop-bp: 1440px;
-    --mobile-bp: 376px;
+    --mobile-bp: 1000px;
 }
 
 //normalizing elements
@@ -68,7 +68,7 @@ button{
 
 }
 
-@media screen and (min-width:376px){
+@media screen and (min-width:1000px){
     :root{
         --clr-g-intro:linear-gradient(to right,  hsl(13, 100%, 72%),hsl(353, 100%, 62%));
         --clr-g-body:linear-gradient(to right,  hsl(237, 17%, 21%), hsl(237, 23%, 32%));
@@ -78,6 +78,12 @@ button{
     }
     .container{
         padding: 4rem 10rem;
+        max-width: 1440px;
+    }
+    .mcontainer{
+        max-width: 1440px;
+        padding: 0;
+        margin: 0 auto;
     }
 }
 

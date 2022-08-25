@@ -7,8 +7,10 @@
             &>img{
                 position: absolute;
                 width: 100%;
+                max-width: 25rem;
                 top: 0;
-                transform: translateY(-50%);
+                left: 50%;
+                transform: translate(-50%,-50%);
                 z-index: 100;
             }
             .container{
@@ -19,6 +21,7 @@
                 height: 40rem;
                 img{
                     width: 155%;
+                    max-width: 50rem;
                     position: absolute;
                     top: 0;
                     left: 50%;
@@ -41,14 +44,16 @@
                 }
             }
         }
-    @media screen and (min-width:376px) {
+    @media screen and (min-width:1000px) {
 
         &>div{
 
             &>img{
                 width: auto;
-                top: 55%;
-                margin-left: 8rem;
+                top: 0;
+                left:0;
+                margin-left: 6vw;
+                transform: translate(-0%,-50%);
             }
             .container{
                 height: 25rem;
